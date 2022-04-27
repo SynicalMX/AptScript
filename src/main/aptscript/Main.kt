@@ -11,7 +11,13 @@ fun main(args: Array<String>) {
 }
 
 fun shell() {
-    println("wip")
+    var running: Boolean = true
+    while (running) {
+        print("AptScript> ")
+        val input = readLine() ?: continue
+
+        val lexer = Lexer("<stdin>", input)
+    }
 }
 
 fun withparams(args: Array<String>) {
