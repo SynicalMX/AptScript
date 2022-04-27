@@ -11,12 +11,22 @@ fun main(args: Array<String>) {
 }
 
 fun shell() {
-    var running: Boolean = true
-    while (running) {
+    while (true) {
         print("AptScript> ")
         val input = readLine() ?: continue
 
+        if (input == "exit()") { break }
+
         val lexer = Lexer("<stdin>", input)
+        val res = lexer.make_tokens()
+
+        if (res.second != null) {
+            error(res.second!!)
+        }
+        else
+        {
+            println(res.first)
+        }
     }
 }
 

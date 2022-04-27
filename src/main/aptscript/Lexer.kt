@@ -7,7 +7,8 @@ const val TT_DIV      = "DIV"
 const val TT_LPAREN   = "LPAREN"
 const val TT_RPAREN   = "RPAREN"
 
-class Lexer(val fn: String, val text: String, val pos: Position = Position(-1, 0, -1, fn, text), var current_char: Char? = null) {
+class Lexer(val fn: String, val text: String, var current_char: Char? = null) {
+    var pos: Position = Position(-1, 0, -1, this.fn, this.text)
 
     init {
         this.advance()
