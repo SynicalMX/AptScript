@@ -3,11 +3,11 @@
 
 <center><h1>AptScript</h1></center>
 
-<center>A programming language focused on user simplicity.</center>
+<center>A programming language focused on user simplicity<br>and the developer experience.</center>
 
 <br>
 <br>
 
 # Installation
 
-wip
+Prebuilt binaries are in the Releases section.

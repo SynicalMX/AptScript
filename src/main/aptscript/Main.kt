@@ -6,11 +6,11 @@ fun main(args: Array<String>) {
         withparams(args)
     }
     else {
-        interpreter()
+        shell()
     }
 }
 
-fun interpreter() {
+fun shell() {
     println("wip")
 }
 
@@ -18,8 +18,9 @@ fun withparams(args: Array<String>) {
     for (i in args.indices) {
         if (args[i] == "-f") {
             val bufferedReader: BufferedReader = File(args[i+1]).bufferedReader()
-            val inputString = bufferedReader.use { it.readText() }
-            println(inputString)
+            val file = bufferedReader.use { it.readText() }
+
+            println(file)
         }
     }
 }
